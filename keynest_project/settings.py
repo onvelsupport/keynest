@@ -8,6 +8,7 @@ DEBUG = os.getenv("DJANGO_DEBUG", "True").lower() == "true"
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
+    "keynest-1v9x.onrender.com",
     "localhost",
     ".onrender.com",
     "keynest.cc",
