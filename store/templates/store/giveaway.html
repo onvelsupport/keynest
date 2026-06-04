@@ -1,61 +1,56 @@
 {% extends "store/base.html" %}
 
-{% block title %}KeyNest Gift Card Giveaway{% endblock %}
-
 {% block content %}
+
 <div class="page-shell">
 
-    <nav class="nav">
+    <div class="nav">
         <div class="logo">KeyNest</div>
-        <div class="nav-badge">Official Giveaway</div>
-    </nav>
+        <div class="badge">Official Giveaway</div>
+    </div>
 
-    <main class="hero">
-        <section class="hero-content">
+    <div class="hero">
+
+        <div>
+
             <span class="pill">£100 Gift Card Giveaway</span>
 
-            <h1>Enter for your chance to win with KeyNest.</h1>
+            <h1>Win a £100 Gift Card</h1>
 
             <p>
-                Complete the short form below to join the giveaway.
+                Enter the official KeyNest giveaway for your chance to win.
                 One winner will be selected and contacted by email.
             </p>
 
-            <div class="info-grid">
-                <div>
-                    <strong>No purchase required</strong>
-                    <span>Free to enter</span>
-                </div>
-                <div>
-                    <strong>Secure entry</strong>
-                    <span>Your details stay private</span>
-                </div>
-                <div>
-                    <strong>Winner contacted</strong>
-                    <span>By email</span>
-                </div>
+            <div class="features">
+                <span>No Purchase Required</span>
+                <span>Secure Entry</span>
+                <span>UK Entrants</span>
             </div>
-        </section>
 
-        <section class="entry-card">
-            <h2>Submit your entry</h2>
-            <p>It only takes a few seconds.</p>
+        </div>
+
+        <div class="card">
+
+            <h2>Enter Giveaway</h2>
+            <p>Complete the form below.</p>
 
             <form method="post">
+
                 {% csrf_token %}
 
                 <div class="field">
-                    <label>Full name</label>
+                    <label>Full Name</label>
                     {{ form.full_name }}
                 </div>
 
                 <div class="field">
-                    <label>Email address</label>
+                    <label>Email Address</label>
                     {{ form.email }}
                 </div>
 
                 <div class="field">
-                    <label>Phone number</label>
+                    <label>Phone Number</label>
                     {{ form.phone }}
                 </div>
 
@@ -64,19 +59,21 @@
                     {{ form.postcode }}
                 </div>
 
-                <label class="checkbox">
+                <div class="checkbox">
                     {{ form.agree }}
                     <span>I agree to the Terms & Conditions</span>
-                </label>
+                </div>
 
-                <button type="submit">Enter Giveaway</button>
+                <button class="submit-btn">
+                    Enter Giveaway
+                </button>
+
             </form>
 
-            <small>
-                We’ll only use your details for this giveaway unless you separately consent to marketing.
-            </small>
-        </section>
-    </main>
+        </div>
+
+    </div>
 
 </div>
+
 {% endblock %}
