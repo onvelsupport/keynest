@@ -1,15 +1,48 @@
 {% extends "store/base.html" %}
 
+{% block title %}Entry Confirmed | KeyNest{% endblock %}
+
 {% block content %}
 
-<h1>Entry Confirmed</h1>
+<div class="page-shell">
 
-<p>
-Thank you for entering the KeyNest Giveaway.
-</p>
+    <div class="nav">
+        <div class="logo">KeyNest</div>
+        <div class="badge">Entry Received</div>
+    </div>
 
-<p>
-The winner will be contacted via email.
-</p>
+    <main class="hero">
+        <section>
+            <span class="pill">Thank you</span>
+
+            <h1>Your entry has been confirmed.</h1>
+
+            <p>
+                Thank you for entering the KeyNest Gift Card Giveaway.
+                If you are selected as the winner, we will contact you by email.
+            </p>
+
+            <div class="features">
+                <span>Entry submitted</span>
+                <span>Winner contacted by email</span>
+                <span>Good luck</span>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>What happens next?</h2>
+
+            <p>
+                Your details have been saved securely for the giveaway draw.
+                No further action is needed.
+            </p>
+
+            <a href="/" class="submit-btn" style="display:flex;align-items:center;justify-content:center;text-decoration:none;">
+                Back to Home
+            </a>
+        </section>
+    </main>
+
+</div>
 
 {% endblock %}
