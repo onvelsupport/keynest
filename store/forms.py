@@ -21,6 +21,7 @@ class EntryForm(forms.ModelForm):
     "city",
     "county",
     "postcode",
+    "preferred_gift_card",
 ]
 
         widgets = {
