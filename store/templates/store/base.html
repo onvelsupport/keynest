@@ -68,7 +68,6 @@ body{
     grid-template-columns:minmax(0,1fr) minmax(360px,450px);
     gap:60px;
     align-items:start;
-    overflow:hidden;
 }
 
 
@@ -264,17 +263,25 @@ body{
 
 @media(max-width:950px){
 
+    html,
+    body{
+        width:100%;
+        overflow-x:hidden;
+    }
+
     .page-shell{
-        padding:24px;
+        width:100%;
+        padding:28px 20px;
+        overflow-x:hidden;
     }
 
     .nav{
-        margin-bottom:40px;
-        gap:12px;
+        margin-bottom:45px;
+        gap:14px;
     }
 
     .logo{
-        font-size:34px;
+        font-size:32px;
     }
 
     .badge{
@@ -284,44 +291,58 @@ body{
     }
 
     .hero{
-        grid-template-columns:1fr;
-        gap:40px;
-        overflow:visible;
+        display:block;
+        width:100%;
+        overflow-x:hidden;
+    }
+
+    .hero > div:first-child{
+        width:100%;
+        overflow:hidden;
     }
 
     .pill{
         font-size:13px;
         padding:10px 14px;
-        max-width:100%;
+        margin-bottom:22px;
     }
 
     .hero h1{
-        font-size:42px;
-        line-height:1;
+        font-size:38px !important;
+        line-height:1.02;
         letter-spacing:-2px;
         max-width:100%;
-        margin-bottom:20px;
-    }
-
-    .hero p{
-        font-size:18px;
-        max-width:100%;
+        width:100%;
+        margin-bottom:22px;
     }
 
     .logo-slider{
+        width:100%;
         max-width:100%;
-        margin:20px 0 30px;
+        margin:18px 0 28px;
+        overflow:hidden;
+    }
+
+    .logo-track{
+        gap:14px;
     }
 
     .logo-track img{
-        height:42px;
-        padding:8px 14px;
+        height:40px;
+        padding:8px 12px;
+    }
+
+    .hero p{
+        font-size:17px;
+        line-height:1.6;
+        max-width:100%;
     }
 
     .features{
         display:grid;
         grid-template-columns:1fr;
         gap:10px;
+        margin-top:25px;
     }
 
     .features span{
@@ -330,13 +351,20 @@ body{
     }
 
     .card{
-        padding:24px;
         width:100%;
+        margin-top:38px;
+        padding:24px;
+        border-radius:26px;
+    }
+
+    .card h2{
+        font-size:32px;
     }
 
     .field input,
     .field select,
     .field textarea{
+        width:100%;
         font-size:16px;
     }
 
