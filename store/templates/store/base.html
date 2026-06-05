@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +9,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -51,6 +53,7 @@ body{
     border-radius:999px;
     font-size:14px;
     font-weight:700;
+    color:#111827;
 }
 
 .hero{
@@ -105,7 +108,8 @@ body{
     background:white;
     border-radius:32px;
     padding:35px;
-    box-shadow:0 40px 100px rgba(0,0,0,.08);
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+    border:1px solid #e5e7eb;
 }
 
 .card h2{
@@ -136,11 +140,13 @@ body{
     border-radius:16px;
     padding:0 15px;
     font-size:15px;
+    transition:.2s;
 }
 
 .field input:focus{
     outline:none;
     border-color:#111827;
+    box-shadow:0 0 0 4px rgba(17,24,39,.08);
 }
 
 .checkbox{
@@ -148,6 +154,7 @@ body{
     align-items:center;
     gap:10px;
     margin:20px 0;
+    font-size:14px;
 }
 
 .submit-btn{
@@ -160,24 +167,46 @@ body{
     font-size:16px;
     font-weight:800;
     cursor:pointer;
+    transition:.2s;
 }
 
 .submit-btn:hover{
-    opacity:.9;
+    transform:translateY(-1px);
+    box-shadow:0 12px 30px rgba(17,24,39,.15);
+}
+
+.footer{
+    text-align:center;
+    margin-top:80px;
+    color:#6b7280;
+    font-size:14px;
 }
 
 @media(max-width:950px){
 
+.page-shell{
+    padding:24px;
+}
+
+.nav{
+    margin-bottom:40px;
+}
+
 .hero{
     grid-template-columns:1fr;
+    gap:40px;
 }
 
 .hero h1{
     font-size:48px;
+    letter-spacing:-2px;
+}
+
+.card{
+    padding:24px;
 }
 
 }
-
 </style>
 
 </head>
@@ -187,11 +216,9 @@ body{
 {% endblock %}
 
 <script>
-
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("KeyNest Giveaway Loaded");
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("KeyNest loaded");
 });
-
 </script>
 
 </body>
