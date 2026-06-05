@@ -28,7 +28,9 @@ class Entry(models.Model):
     ("Xbox", "Xbox"),
     ("Tesco", "Tesco"),
     ("Asos", "ASOS"),
-    ]
+    ("One4All", "One4All"),
+    ("Paypal", "PayPal"),
+]
 
     preferred_gift_card = models.CharField(
     max_length=50,
