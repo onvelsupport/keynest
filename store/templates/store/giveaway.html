@@ -37,38 +37,68 @@
 
             <form method="post">
 
-                {% csrf_token %}
+    {% csrf_token %}
 
-                <div class="field">
-                    <label>Full Name</label>
-                    {{ form.full_name }}
-                </div>
+    <div class="field">
+        <label>First Name</label>
+        {{ form.first_name }}
+    </div>
 
-                <div class="field">
-                    <label>Email Address</label>
-                    {{ form.email }}
-                </div>
+    <div class="field">
+        <label>Last Name</label>
+        {{ form.last_name }}
+    </div>
 
-                <div class="field">
-                    <label>Phone Number</label>
-                    {{ form.phone }}
-                </div>
+    <div class="field">
+        <label>Date of Birth</label>
+        {{ form.date_of_birth }}
+    </div>
 
-                <div class="field">
-                    <label>Postcode</label>
-                    {{ form.postcode }}
-                </div>
+    <div class="field">
+        <label>Email Address</label>
+        {{ form.email }}
+    </div>
 
-                <div class="checkbox">
-                    {{ form.agree }}
-                    <span>I agree to the Terms & Conditions</span>
-                </div>
+    <div class="field">
+        <label>Phone Number</label>
+        {{ form.phone }}
+    </div>
 
-                <button class="submit-btn">
-                    Enter Giveaway
-                </button>
+    <div class="field">
+    <label>Address Line 1</label>
+    {{ form.address_line_1 }}
+</div>
 
-            </form>
+<div class="field">
+    <label>Address Line 2 (Optional)</label>
+    {{ form.address_line_2 }}
+</div>
+
+<div class="field">
+    <label>Town / City</label>
+    {{ form.city }}
+</div>
+
+<div class="field">
+    <label>County (Optional)</label>
+    {{ form.county }}
+</div>
+
+<div class="field">
+    <label>Postcode</label>
+    {{ form.postcode }}
+</div>
+
+    <div class="checkbox">
+        {{ form.agree }}
+        <span>I agree to the Terms & Conditions</span>
+    </div>
+
+    <button class="submit-btn">
+        Enter Giveaway
+    </button>
+
+</form>
 
         </div>
 
