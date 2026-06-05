@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='entry',
             name='preferred_gift_card',
-            field=models.CharField(choices=[('Amazon', 'Amazon'), ('Apple', 'Apple'), ('Google Play', 'Google Play'), ('PlayStation', 'PlayStation'), ('Xbox', 'Xbox'), ('Tesco', 'Tesco'), ('Asos', 'ASOS')], default='Amazon', max_length=50),
+            field=models.CharField(choices=[('Amazon', 'Amazon'), ('Apple', 'Apple'), ('Google Play', 'Google Play'), ('PlayStation', 'PlayStation'), ('Xbox', 'Xbox'), ('Tesco', 'Tesco'), ('Asos', 'ASOS'), ('One4All', 'One4All'), ('Paypal', 'PayPal')], default='Amazon', max_length=50),
             preserve_default=False,
         ),
     ]
