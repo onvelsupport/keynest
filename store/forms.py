@@ -2,6 +2,8 @@ from django import forms
 from .models import Entry
 
 
+
+
 class EntryForm(forms.ModelForm):
     agree = forms.BooleanField(
         required=True,
