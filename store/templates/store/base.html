@@ -65,11 +65,12 @@ body{
 
 .hero{
     display:grid;
-    grid-template-columns:minmax(0,1fr) 450px;
+    grid-template-columns:minmax(0,1fr) minmax(360px,450px);
     gap:60px;
     align-items:start;
     overflow:hidden;
 }
+
 
 .pill{
     display:inline-block;
@@ -263,16 +264,23 @@ body{
 
 @media(max-width:950px){
 
-    .dob-field input{
-        max-width:100%;
-    }
-
     .page-shell{
         padding:24px;
     }
 
     .nav{
         margin-bottom:40px;
+        gap:12px;
+    }
+
+    .logo{
+        font-size:34px;
+    }
+
+    .badge{
+        font-size:13px;
+        padding:10px 14px;
+        white-space:nowrap;
     }
 
     .hero{
@@ -281,20 +289,61 @@ body{
         overflow:visible;
     }
 
+    .pill{
+        font-size:13px;
+        padding:10px 14px;
+        max-width:100%;
+    }
+
     .hero h1{
-        font-size:46px;
+        font-size:42px;
+        line-height:1;
         letter-spacing:-2px;
+        max-width:100%;
+        margin-bottom:20px;
+    }
+
+    .hero p{
+        font-size:18px;
+        max-width:100%;
     }
 
     .logo-slider{
         max-width:100%;
+        margin:20px 0 30px;
+    }
+
+    .logo-track img{
+        height:42px;
+        padding:8px 14px;
+    }
+
+    .features{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .features span{
+        width:100%;
+        text-align:center;
     }
 
     .card{
         padding:24px;
+        width:100%;
+    }
+
+    .field input,
+    .field select,
+    .field textarea{
+        font-size:16px;
+    }
+
+    .dob-field input{
+        max-width:100%;
     }
 }
-
 </style>
 
 </head>
