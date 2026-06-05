@@ -1,6 +1,65 @@
 {% extends "store/base.html" %}
+{% load static %}
 
 {% block content %}
+
+<style>
+
+.logo-slider{
+    overflow:hidden;
+    width:100%;
+    margin:28px 0 35px;
+    position:relative;
+}
+
+.logo-track{
+    display:flex;
+    gap:18px;
+    width:max-content;
+    animation:scrollLogos 18s linear infinite;
+}
+
+.logo-track img{
+    height:52px;
+    width:auto;
+    background:white;
+    padding:12px 18px;
+    border-radius:14px;
+    border:1px solid #e5e7eb;
+    flex-shrink:0;
+}
+
+@keyframes scrollLogos{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+.logo-slider::before,
+.logo-slider::after{
+    content:"";
+    position:absolute;
+    top:0;
+    width:60px;
+    height:100%;
+    z-index:2;
+}
+
+.logo-slider::before{
+    left:0;
+    background:linear-gradient(to right,#f8fafc,transparent);
+}
+
+.logo-slider::after{
+    right:0;
+    background:linear-gradient(to left,#f8fafc,transparent);
+}
+
+</style>
 
 <div class="page-shell">
 
@@ -14,7 +73,28 @@
         <div>
 
             <span class="pill">£100 Gift Card of Your Choice</span>
-<h1>Win a £100 Gift Card of Your Choice</h1>
+
+            <h1>Win a £100 Gift Card of Your Choice</h1>
+
+            <div class="logo-slider">
+                <div class="logo-track">
+
+                    <img src="{% static 'store/images/amazon.png' %}" alt="Amazon">
+                    <img src="{% static 'store/images/apple.png' %}" alt="Apple">
+                    <img src="{% static 'store/images/playstation.png' %}" alt="PlayStation">
+                    <img src="{% static 'store/images/xbox.png' %}" alt="Xbox">
+                    <img src="{% static 'store/images/googleplay.png' %}" alt="Google Play">
+
+                    <!-- Duplicate for smooth infinite scrolling -->
+
+                    <img src="{% static 'store/images/amazon.png' %}" alt="Amazon">
+                    <img src="{% static 'store/images/apple.png' %}" alt="Apple">
+                    <img src="{% static 'store/images/playstation.png' %}" alt="PlayStation">
+                    <img src="{% static 'store/images/xbox.png' %}" alt="Xbox">
+                    <img src="{% static 'store/images/googleplay.png' %}" alt="Google Play">
+
+                </div>
+            </div>
 
             <p>
                 Enter the official KeyNest giveaway for your chance to win.
@@ -36,73 +116,73 @@
 
             <form method="post">
 
-    {% csrf_token %}
+                {% csrf_token %}
 
-    <div class="field">
-        <label>First Name</label>
-        {{ form.first_name }}
-    </div>
+                <div class="field">
+                    <label>First Name</label>
+                    {{ form.first_name }}
+                </div>
 
-    <div class="field">
-        <label>Last Name</label>
-        {{ form.last_name }}
-    </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    {{ form.last_name }}
+                </div>
 
-    <div class="field dob-field">
-    <label>Date of Birth</label>
-    {{ form.date_of_birth }}
-</div>
+                <div class="field dob-field">
+                    <label>Date of Birth</label>
+                    {{ form.date_of_birth }}
+                </div>
 
-    <div class="field">
-        <label>Email Address</label>
-        {{ form.email }}
-    </div>
+                <div class="field">
+                    <label>Email Address</label>
+                    {{ form.email }}
+                </div>
 
-    <div class="field">
-        <label>Phone Number</label>
-        {{ form.phone }}
-    </div>
+                <div class="field">
+                    <label>Phone Number</label>
+                    {{ form.phone }}
+                </div>
 
-    <div class="field">
-    <label>Address Line 1</label>
-    {{ form.address_line_1 }}
-</div>
+                <div class="field">
+                    <label>Address Line 1</label>
+                    {{ form.address_line_1 }}
+                </div>
 
-<div class="field">
-    <label>Address Line 2 (Optional)</label>
-    {{ form.address_line_2 }}
-</div>
+                <div class="field">
+                    <label>Address Line 2 (Optional)</label>
+                    {{ form.address_line_2 }}
+                </div>
 
-<div class="field">
-    <label>Town / City</label>
-    {{ form.city }}
-</div>
+                <div class="field">
+                    <label>Town / City</label>
+                    {{ form.city }}
+                </div>
 
-<div class="field">
-    <label>County (Optional)</label>
-    {{ form.county }}
-</div>
+                <div class="field">
+                    <label>County (Optional)</label>
+                    {{ form.county }}
+                </div>
 
-<div class="field">
-    <label>Postcode</label>
-    {{ form.postcode }}
-</div>
+                <div class="field">
+                    <label>Postcode</label>
+                    {{ form.postcode }}
+                </div>
 
-<div class="field">
-    <label>Preferred Gift Card</label>
-    {{ form.preferred_gift_card }}
-</div>
+                <div class="field">
+                    <label>Preferred Gift Card</label>
+                    {{ form.preferred_gift_card }}
+                </div>
 
-    <div class="checkbox">
-        {{ form.agree }}
-        <span>I agree to the Terms & Conditions</span>
-    </div>
+                <div class="checkbox">
+                    {{ form.agree }}
+                    <span>I agree to the Terms & Conditions</span>
+                </div>
 
-    <button class="submit-btn">
-        Enter Giveaway
-    </button>
+                <button class="submit-btn">
+                    Enter Giveaway
+                </button>
 
-</form>
+            </form>
 
         </div>
 
